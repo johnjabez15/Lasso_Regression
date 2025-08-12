@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <!-- Link to the stylesheet for styling the page -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container result-container">
+        <h1>Sales Prediction Result</h1>
+        <div class="result-box">
+            <p><strong>Predicted Sales:</strong></p>
+            <!-- The Flask app will inject the 'prediction' value here -->
+            <p class="prediction-value">{{ prediction }}</p>
+        </div>
+        <!-- Link to go back to the home page for a new prediction -->
+        <a href="/" class="back-link">Make Another Prediction</a>
+    </div>
+</body>
+</html>

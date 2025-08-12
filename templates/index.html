@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+    <!-- Link to the stylesheet for styling the page -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lasso Regression: Ad Sales Predictor</h1>
+        <form action="/predict" method="post" class="prediction-form">
+            <div class="form-group">
+                <label for="tv_budget">TV Ad Budget ($k):</label>
+                <!-- Input field for the TV advertising budget -->
+                <input type="number" id="tv_budget" name="tv_budget" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="radio_budget">Radio Ad Budget ($k):</label>
+                <!-- Input field for the Radio advertising budget -->
+                <input type="number" id="radio_budget" name="radio_budget" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="newspaper_budget">Newspaper Ad Budget ($k):</label>
+                <!-- Input field for the Newspaper advertising budget -->
+                <input type="number" id="newspaper_budget" name="newspaper_budget" step="0.01" required>
+            </div>
+            <button type="submit" class="submit-btn">Predict Sales</button>
+        </form>
+    </div>
+</body>
+</html>
